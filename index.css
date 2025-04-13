@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .calendar {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+  
+  .calendar-header button {
+    padding: 5px 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  #monthYear {
+    font-size: 18px;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 0 10px;
+  }
+  
+  .day, .date {
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .day {
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
+  
+  .empty {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .today {
+    background-color: #ffdddd;
+    color: red;
+    font-weight: bold;
+  }
+  
+  .day-shift {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .night-shift {
+    background-color: #001f3f;
+    color: white;
+    font-weight: bold;
+  }
+  
+  
+  @media (max-width: 480px) {
+    .day, .date {
+      padding: 8px 3px;
+      font-size: 12px;
+    }
+  
+    .calendar-header button {
+      font-size: 16px;
+      padding: 5px 8px;
+    }
+  
+    #monthYear {
+      font-size: 16px;
+    }
+  
+    .days {
+      gap: 4px;
+    }
+  }
+  
