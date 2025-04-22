@@ -37,24 +37,39 @@ function renderCalendar(month, year) {
     calendar.appendChild(empty);
   }
 
-  
+ 
   for (let i = 1; i <= lastDay.getDate(); i++) {
     const dateElem = document.createElement('div');
     dateElem.className = 'date';
-    dateElem.textContent = i;
+
+    const numberSpan = document.createElement('span');
+    numberSpan.className = 'date-number';
+    numberSpan.textContent = i;
+    dateElem.appendChild(numberSpan);
 
     const thisDate = new Date(year, month, i);
 
-    // сегодня
+   
     if (
       i === today.getDate() &&
       month === today.getMonth() &&
       year === today.getFullYear()
     ) {
-      dateElem.classList.add('today');
+      dateElem.classList.add('today'); //сегодня
+
+      
+      const shiftStartDate = new Date(2025, 3, 14); 
+      const daysSinceStart = Math.floor((thisDate - shiftStartDate) / (1000 * 60 * 60 * 24));
+
+      if (daysSinceStart >= 0) {
+        const shiftCycle = daysSinceStart % 4;
+        if (shiftCycle === 0 || shiftCycle === 1) {
+          numberSpan.classList.add('red-text'); //красим цифры
+        }
+      }
     }
 
-    //от 14 апреля 2025
+    
     const shiftStartDate = new Date(2025, 3, 14); // 14.04.2025
     const daysSinceStart = Math.floor((thisDate - shiftStartDate) / (1000 * 60 * 60 * 24));
 
@@ -65,7 +80,6 @@ function renderCalendar(month, year) {
       } else if (shiftCycle === 1) {
         dateElem.classList.add('night-shift');
       }
-    
     }
 
     calendar.appendChild(dateElem);
