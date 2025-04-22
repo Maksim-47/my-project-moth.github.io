@@ -70,6 +70,11 @@ body {
     color: white;
     font-weight: bold;
   }
+
+.day-shift.today .date-number,
+.night-shift.today .date-number {
+  color: #ff0000a1;
+}
   
   
   @media (max-width: 480px) {
