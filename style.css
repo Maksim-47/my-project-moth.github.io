@@ -61,5 +61,38 @@ body {
     color: white;
     font-weight: bold;
   }
+ .date-number.red-text {
+  color: red;
+  }
+/* функциональная кнопка */
+.feature-wrapper {
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+}
+
+.feature-icon {
+  position: relative;
+  right: -573px;
+  top: -287px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.feature-popup {
+  position: relative;
+  top: -291px;
+  left: 559px;
+  display: none;
+  margin-top: 6px;
+  padding: 6px 10px;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+}
+
   
   
