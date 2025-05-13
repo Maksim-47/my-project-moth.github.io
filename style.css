@@ -73,7 +73,7 @@ body {
 
 .feature-icon {
   position: relative;
-  right: -573px;
+  right: -860px;
   top: -287px;
   width: 24px;
   height: 24px;
@@ -83,7 +83,7 @@ body {
 .feature-popup {
   position: relative;
   top: -291px;
-  left: 559px;
+  left: 850px;
   display: none;
   margin-top: 6px;
   padding: 6px 10px;
