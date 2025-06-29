@@ -71,14 +71,14 @@ body {
   margin-left: 10px;
 }
 
-.feature-icon {
+/* .feature-icon {
   position: relative;
   right: -860px;
   top: -287px;
   width: 24px;
   height: 24px;
   cursor: pointer;
-}
+} */
 
 .feature-popup {
   position: relative;
